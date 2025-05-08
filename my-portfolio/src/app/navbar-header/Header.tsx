@@ -25,7 +25,7 @@ export default function Header() {
       const resetTimeout = setTimeout(() => {
         setVisibleLineIndex(0);
         setCycleKey((prev) => prev + 1);
-      }, 7000); // Wait before restarting the animation
+      }, 7000);
       return () => clearTimeout(resetTimeout);
     }
   }, [visibleLineIndex]);
@@ -71,14 +71,18 @@ export default function Header() {
   );
 
   const router = useRouter();
-  const handleClick = () => {
-    router.push("/contact");
+
+  const handleScrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
-    <div className="w-screen bg-[#111111] dark:bg-gray-700 h-[1300px] md:h-[800px]">
-      <div className="max-w-[1440px] md:flex md:justify-between m-auto items-center px-8 ">
-        <div className="space-y-4 ">
+    <div className="w-screen bg-[#111111] dark:bg-gray-700 h-[1170px] md:h-[800px] ">
+      <div className="max-w-[1440px] flex flex-col-reverse md:flex-row md:justify-between m-auto items-center px-8 ">
+        <div className="space-y-4 mt-[20px] md:mt-[0px] ">
           <AnimatePresence mode="wait">
             {lines
               .slice(0, visibleLineIndex)
@@ -89,9 +93,9 @@ export default function Header() {
             <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{}} // Removed the delay here to make it appear immediately
-              className="w-[210px] cursor-pointer h-[60px] border-[1px] border-gray-500 mt-[60px] text-[16px] leading-[28px] text-white font-mono"
-              onClick={handleClick}
+              transition={{}}
+              onClick={() => handleScrollToSection("contact")}
+              className="w-[210px] relative z-[1000] cursor-pointer h-[60px] border-[1px] border-gray-500 mt-[60px] text-[16px] leading-[28px] text-white font-mono"
             >
               GET IN TOUCH
             </motion.button>
@@ -103,7 +107,7 @@ export default function Header() {
           width={500}
           height={500}
           alt="self"
-          className="rounded-lg  "
+          className="rounded-lg md:mt-[20px]  "
         />
       </div>
     </div>
