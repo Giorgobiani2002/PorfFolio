@@ -10,7 +10,7 @@ import Project from "@/app/project/ProjectFinance";
 import { SmallProject } from "@/app/project/SmallProject";
 import React from "react";
 
-export default function home() {
+export default function HomePage() {
   return (
     <div>
       <div className=" relative   overflow-hidden ">
@@ -20,7 +20,10 @@ export default function home() {
       </div>
       <About />
       {/* <Experience /> */}
-      <h1 className=" text-center text-4xl md:text-[6rem] font-bold mt-1 leading-none" id="projects">
+      <h1
+        className=" text-center text-4xl md:text-[6rem] font-bold mt-1 leading-none"
+        id="projects"
+      >
         Full-Stack Projects
       </h1>
       <div className="md:flex">
