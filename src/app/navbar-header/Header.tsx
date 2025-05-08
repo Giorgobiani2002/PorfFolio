@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 export default function Header() {
   const lines = [
@@ -69,8 +68,6 @@ export default function Header() {
       ))}
     </motion.div>
   );
-
-  const router = useRouter();
 
   const handleScrollToSection = (id: string) => {
     const element = document.getElementById(id);
