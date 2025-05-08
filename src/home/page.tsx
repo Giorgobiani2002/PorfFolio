@@ -26,7 +26,7 @@ export default function HomePage() {
       >
         Full-Stack Projects
       </h1>
-      <div className="md:flex">
+      <div >
         <Project />
         <Eccomerce />
       </div>
