@@ -162,7 +162,7 @@ export const Lid = ({
           transformStyle: "preserve-3d",
           transformOrigin: "top",
         }}
-        className="absolute inset-0 h-96 md:w-[32rem]  w-full rounded-2xl bg-[#010101] p-2"
+        className="absolute top-0 left-0 h-96 w-full rounded-2xl bg-[#010101] p-2"
       >
         <div className="absolute inset-0 rounded-lg bg-[#272729]" />
         <img
