@@ -76,7 +76,7 @@ export default function Header() {
   };
 
   return (
-    <div className="w-screen bg-[#111111] dark:bg-gray-700 h-[700px]">
+    <div className="w-screen bg-[#111111] dark:bg-gray-700 h-[1300px] md:h-[800px]">
       <div className="max-w-[1440px] md:flex md:justify-between m-auto items-center px-8 ">
         <div className="space-y-4 ">
           <AnimatePresence mode="wait">
@@ -99,11 +99,11 @@ export default function Header() {
         </div>
 
         <Image
-          src="/lasha.jpg"
+          src="/myphoto.jpg"
           width={500}
           height={500}
           alt="self"
-          className="rounded-lg mt-[40px] md:flex hidden"
+          className="rounded-lg  "
         />
       </div>
     </div>
