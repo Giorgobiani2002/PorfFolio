@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div>
       <div className=" relative   overflow-hidden ">
-        <Boxes />
+        <Boxes className="hidden md:flex" />
         <Navbar />
         <Header />
       </div>
@@ -26,7 +26,7 @@ export default function HomePage() {
       >
         Full-Stack Projects
       </h1>
-      <div >
+      <div>
         <Project />
         <Eccomerce />
       </div>
