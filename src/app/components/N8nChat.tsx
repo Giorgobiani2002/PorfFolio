@@ -18,7 +18,7 @@ export default function N8nChat() {
   useEffect(() => {
     createChat({
       webhookUrl:
-      "https://n8n-zmpq.onrender.com/webhook/5219a7a3-04d7-4d02-9a25-154686fdcdda/chat",
+      "http://localhost:5678/webhook/5219a7a3-04d7-4d02-9a25-154686fdcdda/chat",
       webhookConfig: {
         method: "POST",
         headers: {},
